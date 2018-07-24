@@ -18,9 +18,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/about', function () {
-    return view('about', [
-        'tasks' => ['go to shop', 'send sim card', 'go to fix ebike']
-    ]);
-});

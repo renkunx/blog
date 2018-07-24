@@ -71,7 +71,6 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/about') }}">About</a>
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
@@ -82,7 +81,6 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
