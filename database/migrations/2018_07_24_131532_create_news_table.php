@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePoster extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class CreatePoster extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('news', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('newstitle');
+            $table->string('newscontent');
+            $table->string('relatednews');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,8 @@ class CreatePoster extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('news');
     }
+
+    
 }

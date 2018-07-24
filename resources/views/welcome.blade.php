@@ -79,15 +79,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    爱普斯科技
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">文档</a>
-                    <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">新闻</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/ipusi">GitHub</a>
+                    <a href="{{ url('/home') }}">关于我们</a>
                 </div>
             </div>
         </div>
