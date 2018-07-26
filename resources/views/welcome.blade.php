@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
 
         <!-- Styles -->
         <style>
@@ -65,7 +65,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height" id="app">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -83,11 +83,30 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel-news.com">新闻</a>
+                    <a href="{{ url('/news') }}">新闻</a>
                     <a href="https://github.com/ipusi">GitHub</a>
                     <a href="{{ url('/home') }}">关于我们</a>
                 </div>
             </div>
         </div>
+        <canvas id="reactive-bg-canvas"></canvas>
+        <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://cdn.bootcss.com/gsap/latest/TweenLite.min.js"></script>
+        <script src="{{ asset('js/magic-canvas.min.js') }}"></script>
+        <script>
+        function random_move () {
+            $.magicCanvas.draw({
+                type:"random-move",
+                rgb : function (circlePos) {
+                    var px = circlePos.x;
+                    var py = circlePos.y;
+                    // do some computation....
+                    return {r:parseInt(px % 255),g:parseInt(py % 255),b:203};
+                }
+            })
+        };
+        random_move();
+        </script>
     </body>
+
 </html>

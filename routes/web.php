@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/news','NewsController@index')->name('热点新闻');
+Route::get('/news/{articleid}','NewsController@show')->name('热点新闻');

@@ -13,3 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+mix.copy('resources/assets/js/magic-canvas.min.js','public/js');
+
+mix.copy('resources/assets/sass/blog.css','public/css');
