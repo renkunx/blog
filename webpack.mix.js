@@ -17,3 +17,4 @@ mix.js('resources/assets/js/app.js', 'public/js')
 mix.copy('resources/assets/js/magic-canvas.min.js','public/js');
 
 mix.copy('resources/assets/sass/blog.css','public/css');
+mix.copy('resources/assets/sass/timeline.css','public/css');

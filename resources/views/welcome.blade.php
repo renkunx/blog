@@ -85,7 +85,7 @@
                 <div class="links">
                     <a href="{{ url('/news') }}">新闻</a>
                     <a href="https://github.com/ipusi">GitHub</a>
-                    <a href="{{ url('/home') }}">关于我们</a>
+                    <a href="{{ url('/contact') }}">关于我们</a>
                 </div>
             </div>
         </div>

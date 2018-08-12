@@ -42,7 +42,7 @@
 
           <div class="p-3" style="background-color: rgba(143, 159, 175, 0.28) !important">
             <h4 class="font-italic">事件追踪</h4>
-            <ol class="list-unstyled mb-0">
+            <ol class="mb-0">
               @foreach ( $news->newstimelines as $newstimeline )
                 <li><a href="{{$newstimeline->url}}">{{$newstimeline->date}} {{$newstimeline->title}}</a></li>  
               @endforeach
