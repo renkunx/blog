@@ -29,7 +29,8 @@
           </div>
         </div>
         @endforeach
-        {{ $newses->links() }}
+        <div class="flex-md-row mb-4 box-shadow h-md-250">{{ $newses->links() }}</div>
+        
     </div>
 
 @endsection

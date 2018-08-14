@@ -83,13 +83,13 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/news') }}">新闻</a>
-                    <a href="https://github.com/ipusi">GitHub</a>
-                    <a href="{{ url('/contact') }}">关于我们</a>
+                    <a href="{{ url('/news') }}" target="_blank">新闻</a>
+                    <a href="https://github.com/ipusi" target="_blank">GitHub</a>
+                    <a href="{{ url('/contact') }}" target="_blank">关于我们</a>
                 </div>
             </div>
         </div>
-        <canvas id="reactive-bg-canvas"></canvas>
+        <!-- <canvas id="reactive-bg-canvas"></canvas>
         <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
         <script src="http://cdn.bootcss.com/gsap/latest/TweenLite.min.js"></script>
         <script src="{{ asset('js/magic-canvas.min.js') }}"></script>
@@ -106,7 +106,7 @@
             })
         };
         random_move();
-        </script>
+        </script> -->
     </body>
 
 </html>

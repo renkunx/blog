@@ -13,7 +13,7 @@
            <p class="text-center w-75 m-auto">移动应用开发</p>
            <p class="text-center w-75 m-auto">软件开发</p>
            <div class="row">
-             <div class="col-sm-12 col-md-6 col-lg-6 my-5">
+             <div class="col-sm-12 col-md-4 col-lg-4 my-5">
                <div class="card border-0">
                   <div class="card-body text-center">
                     <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
@@ -22,7 +22,7 @@
                   </div>
                 </div>
              </div>
-             <div class="col-sm-12 col-md-6 col-lg-6 my-5">
+             <div class="col-sm-12 col-md-4 col-lg-4 my-5">
                <div class="card border-0">
                   <div class="card-body text-center">
                     <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
@@ -31,22 +31,22 @@
                   </div>
                 </div>
              </div>
-             <div class="col-sm-12 col-md-6 col-lg-6 my-5">
+             <div class="col-sm-12 col-md-4 col-lg-4 my-5">
                  <div class="card border-0">
                     <div class="card-body text-center">
                       <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
                       <h4 class="text-uppercase mb-5">office loaction</h4>
-                      <address>西安市高新区高新六路北口铁建瑞园3-1-203</address>
+                      <a href="https://j.map.baidu.com/SzHtZ">西安市高新区高新六路北口铁建瑞园3-1-203</a>
                     </div>
                   </div>
               </div>
-             <div class="col-sm-12 col-md-6 col-lg-6 my-5">
+             <!-- <div class="col-sm-12 col-md-6 col-lg-6 my-5">
                  <div class="card border-0">
                  <div class="card-body text-center">
                  <iframe width="350" height="350" frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://f.amap.com/6CCNc_0395nCQ'></iframe>'
                     </div>
                   </div>
-              </div>
+              </div> -->
            </div>
 
            <ul class="timeline">

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', '兴业尽责'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://frp.shuigvo.info'),
 
     /*
     |--------------------------------------------------------------------------
@@ -148,6 +148,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        //添加 wechat
+        Overtrue\LaravelWeChat\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -210,6 +212,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        //添加 wechat
+        'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
 
     ],
 
