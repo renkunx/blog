@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
@@ -63,6 +63,10 @@
                                         @csrf
                                     </form>
                                 </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/console') }}"> {{ __('控制台') }} </a>
                             </li>
                         @endguest
                     </ul>

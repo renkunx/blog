@@ -15,6 +15,10 @@ class CreateNewsTimelinesTable extends Migration
     {
         Schema::create('news_timelines', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('url');
+            $table->string('title');
+            $table->string('articleid');
+            $table->string('date');
             $table->timestamps();
         });
     }

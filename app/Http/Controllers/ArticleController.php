@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 class ArticleController extends Controller
 {
     /**
@@ -44,9 +44,14 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($id)
     {
         //
+        Log::info($id);
+        $article = Article::where('id','=',$id)->first();
+        Log::info($article);
+        // dd($article);
+        return view('article.article',['article' => $article]);
     }
 
     /**
