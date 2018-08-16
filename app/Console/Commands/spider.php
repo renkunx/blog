@@ -63,6 +63,7 @@ class spider extends Command
         $author = $meta[3]['content'];
         $keywords = $meta[2]['content'];
         $descripe = $meta[1]['content'];
+        $descripe = preg_replace("/马蜂窝/si","玩转西安",$descripe);
         $content = $crawler->filter('.vc_article')->html();
         //过滤除 data-src 的属性
         $content = preg_replace('/\s(?!(data-src))[a-zA-Z]+=[\'\"]{1}[^\'\"]+[\'\"]{1}/iu','', $content);
@@ -82,34 +83,10 @@ class spider extends Command
         $article->descripe = $descripe;
         $article->save();
         Storage::disk('local')->put($title,$content);
-        // dd($content->filter('.vc_article')->html());
-        // $client->setClient($guzzleClent);
-        // $request = function ($total) use ($client,$keyWords){
-        //     foreach ($keyWords as $key){
-        //         yield function () use($client,$url){
-        //             return $client->request('GET',$url);
-        //         };
-        //     }
-        // };
-        // $pool = new Pool($guzzleClent,$request(count($keyWords)),[
-        //     'concurrency' => $concurrency,
-        //     'fulfilled' => function ($response, $index) use ($client){
-        //         $response->filter('h2 > a')->reduce(function($node) use ($client){
-        //             if(contentlen($node->attr('title'))==0) {
-        //                 $title = $node->text();             //文章标题
-        //                 $link = $node->attr('href');        //文章链接
-        //                 $carwler = $client->request('GET',$link);       //进入文章
-        //                 $content=$carwler->filter('#emojify')->first()->text();     //获取内容
-        //                 Storage::disk('local')->put($title,$content);           //储存在本地
-        //             }
-        //         });
-        //     },
-        //     'rejected' => function ($reason, $index){
-        //         $this->error("Error is ".$reason);
-        //     }
-        // ]);
-        // //开始爬取
-        // $promise = $pool->promise();
-        // $promise->wait();
+        
+        // web 控制台获取文章链接
+        // $('.tn-image').each(function(index,value){
+        //     console.log(value.children[0].getAttribute('href'))
+        //     })
     }
 }

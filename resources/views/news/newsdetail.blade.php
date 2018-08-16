@@ -8,10 +8,13 @@
         <div class="col-md-7 blog-main">
           <div class="blog-post">
             <h2 class="blog-post-title">{{ $news->title }}</h2>
-            <p class="blog-post-meta"> {{ $news->created_at }} 
+            <p class="blog-post-meta"> 
+              <span class="label label-default">{{ $news->created_at }}</span>
+               
 
               @foreach ( $news->relatednews as $relatednews )
-                <a href="#">{{ $relatednews->brand }}</a>
+                
+                <span class="label label-info">{{ $relatednews->brand }}</span>
               @endforeach
 
             </p>

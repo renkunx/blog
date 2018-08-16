@@ -47,11 +47,10 @@ class ArticleController extends Controller
     public function show($id)
     {
         //
-        Log::info($id);
         $article = Article::where('id','=',$id)->first();
-        Log::info($article);
+        $title = $article->title;
         // dd($article);
-        return view('article.article',['article' => $article]);
+        return view('article.article',['article' => $article, 'title' => $title]);
     }
 
     /**

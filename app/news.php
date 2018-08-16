@@ -32,7 +32,7 @@ class News extends Model
     public function getCreatedAtAttribute($value)
     {
         
-        return Carbon::createFromTimestamp($value)->diffForHumans();
+        return Carbon::parse($value)->diffForHumans();
     }
         
     public function relatednews()
