@@ -23,6 +23,7 @@ Route::get('/news','NewsController@index')->name('热点新闻');
 Route::get('/news/{articleid}','NewsController@show')->name('热点新闻');
 Route::get('/contact','ContactController@index')->name('联系我们');
 //文章
+Route::get('/article','ArticleController@index');
 Route::get('/article/{id}','ArticleController@show');
 //微信消息
 Route::any('/wechat', 'WeChatController@serve');

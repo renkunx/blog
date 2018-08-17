@@ -15,6 +15,8 @@ class ArticleController extends Controller
     public function index()
     {
         //
+        $articles = Article::orderBy('created_at','desc')->paginate(6);
+        return view('article/article',['articles' => $articles]);
     }
 
     /**
@@ -50,7 +52,7 @@ class ArticleController extends Controller
         $article = Article::where('id','=',$id)->first();
         $title = $article->title;
         // dd($article);
-        return view('article.article',['article' => $article, 'title' => $title]);
+        return view('article.articledetail',['article' => $article, 'title' => $title]);
     }
 
     /**

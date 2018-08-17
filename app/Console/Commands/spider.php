@@ -60,6 +60,20 @@ class spider extends Command
             ];
         });
         // dd($meta);
+
+        $imgs = $crawler->filter('img')->each(function($node) {
+            // return [$node->attr('name') => $node->attr('content')];
+            return [
+                'src' => $node->attr('data-src')
+            ];
+        });
+        // dd($imgs);
+        $index = rand(0,count($imgs));
+        while(!$imgs[$index]['src'])
+        {
+            $index = rand(0,count($imgs));
+        }
+        $image = $imgs[$index]['src'];
         $author = $meta[3]['content'];
         $keywords = $meta[2]['content'];
         $descripe = $meta[1]['content'];
@@ -81,8 +95,11 @@ class spider extends Command
         $article->keywords = $keywords;
         $article->content = $content;
         $article->descripe = $descripe;
+        $article->image = $image;
+        $article->articleid = preg_split('/\,/',$author)[0];
+        // dd(preg_split('/\,/',$author)[0]);
         $article->save();
-        Storage::disk('local')->put($title,$content);
+        // Storage::disk('local')->put($title,$content);
         
         // web 控制台获取文章链接
         // $('.tn-image').each(function(index,value){
