@@ -78,57 +78,57 @@
             @yield('content')
         </main>
     </div>
+    <section id="footer">
+            <div class="container">
+                <div class="row text-center text-xs-center text-sm-center text-md-center">
+                    <div class="col-4">
+                        <h5>小程序</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>易递取</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>商户小账本</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>玩转西安</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5>开源项目</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>blog</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>sftp-asycn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5>合作伙伴</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>中国移动</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>中国电信</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>中国联通</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                        <ul class="list-unstyled list-inline social text-center">
+                            <li class="list-inline-item"><a href="tel:+8618629080248"><i class="fa fa-phone"></i></a></li>
+                            <li class="list-inline-item"><a href="https://weibo.com/5720540544/profile?topnav=1&wvr=6"><i class="fa fa-weibo"></i></a></li>
+                            <li class="list-inline-item"><a href="" rel="tooltip" title="Download now">
+                                <i class="fa fa-wechat"></i>
+                                <div class="thumbnail" style="display:none;">
+                                    <!-- <img class="img-responsive" src="/images/wechat.jpg"> -->
+                                </div>
+                            </a></li>
+                            <li class="list-inline-item"><a href="https://j.map.baidu.com/SzHtZ" target="_blank"><i class="fa fa-map-marker"></i></a></li>
+                            <li class="list-inline-item"><a href="mailto:rk@pusi.site?subject=项目合作"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                    </hr>
+                </div>	
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                        <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://pusi.site" target="_blank">爱普斯科技</a></p>
+                    </div>
+                    </hr>
+                </div>	
+            </div>
+        </section>
 </body>
-<section id="footer">
-		<div class="container">
-			<div class="row text-center text-xs-center text-sm-center text-md-center">
-				<div class="col-4">
-					<h5>小程序</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>易递取</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>商户小账本</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>玩转西安</a></li>
-					</ul>
-				</div>
-				<div class="col-4">
-					<h5>开源项目</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>blog</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>sftp-asycn</a></li>
-					</ul>
-				</div>
-				<div class="col-4">
-					<h5>合作伙伴</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>中国移动</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>中国电信</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>中国联通</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="tel:+8618629080248"><i class="fa fa-phone"></i></a></li>
-						<li class="list-inline-item"><a href="https://weibo.com/5720540544/profile?topnav=1&wvr=6"><i class="fa fa-weibo"></i></a></li>
-						<li class="list-inline-item"><a href="" rel="tooltip" title="Download now">
-                            <i class="fa fa-wechat"></i>
-                            <div class="thumbnail" style="display:none;">
-                                <!-- <img class="img-responsive" src="/images/wechat.jpg"> -->
-                            </div>
-                        </a></li>
-						<li class="list-inline-item"><a href="https://j.map.baidu.com/SzHtZ" target="_blank"><i class="fa fa-map-marker"></i></a></li>
-						<li class="list-inline-item"><a href="mailto:rk@pusi.site?subject=项目合作"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://pusi.site" target="_blank">爱普斯科技</a></p>
-				</div>
-				</hr>
-			</div>	
-		</div>
-	</section>
 </html>

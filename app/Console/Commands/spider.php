@@ -44,7 +44,7 @@ class spider extends Command
     {
         //
         // $concurrency = $this->argument('concurrency');  //并发数
-        $url = $this->argument('url');    //查询关键词
+        $url = $this->argument('url');    //网页地址
         $guzzleClent = new GuzzleClient();
         $client = new GoutteClient();
         $client->setClient($guzzleClent);

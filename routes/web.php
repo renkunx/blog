@@ -27,3 +27,8 @@ Route::get('/article','ArticleController@index');
 Route::get('/article/{id}','ArticleController@show');
 //微信消息
 Route::any('/wechat', 'WeChatController@serve');
+
+// 邮件预览
+Route::get('/mailable', function () {
+    return new App\Mail\SendHongBaoMail();
+});
