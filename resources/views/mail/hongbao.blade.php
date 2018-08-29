@@ -109,11 +109,13 @@
                     <img src="{{ $yuebaohongbao }}" style="height:250px" alt="余额宝红包"  >
             </div>
         </div>
-        <span class="label label-success">付款时选择余额宝付款</span>
-        <p style="color:red">支付宝发红包啦！人人可领，天天可领！长按复制此消息，打开支付宝领红包！vPCGS1566C</p>
-        <p style="color:cornflowerblue">打开支付宝首页搜索：6107156，即可100%领取！</p>
-        <p>支付宝扫码领红包，红包升级每天领两份，最高99元！天天可领。</p>
-        <p>红包可在实体门店付款或淘宝购物时抵扣。</p>
+        <span class="label label-success">👉付款时选择余额宝付款👈</span>
+        <ol>
+            <li><p>支付宝发[红包]啦！人人可领，天天可领！长按复制此消息，打开支付宝领取！vPCGS1566C</p></li>
+            <li><p>打开支付宝首页搜索：6107156，即可100%领取！</p></li>
+            <li><p>打开支付宝扫码领，[红包]升级每天领两份，最高99元！天天可领。</p></li>
+        </ol>
+        <p style="font-weight: bold;">❤️[红包]可在实体门店付款或淘宝购物时抵扣❤️</p>
     </div>
 </body>
 </html>

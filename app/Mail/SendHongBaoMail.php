@@ -31,7 +31,7 @@ class SendHongBaoMail extends Mailable
     {
         $hongbaoma = 'http://p77n9a5vi.bkt.clouddn.com/IMG_0944.PNG';
         $yuebaohongbao = 'http://p77n9a5vi.bkt.clouddn.com/yuebaohongbao.jpeg';
-        return $this->subject("支付宝红包")
+        return $this->subject("您有一份来自马云的🎁需要领取")
                     ->view('mail.hongbao',['hongbaoma' => $hongbaoma,
                     'yuebaohongbao' => $yuebaohongbao]);
     }

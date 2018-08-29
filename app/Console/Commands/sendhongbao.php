@@ -7,6 +7,7 @@ use App\Mail\SendHongBaoMail;
 use Illuminate\Support\Facades\Mail;
 use App\Spread;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Queue\Queue;
 
 class sendhongbao extends Command
 {
@@ -15,7 +16,7 @@ class sendhongbao extends Command
      *
      * @var string
      */
-    protected $signature = 'command:sendhongbao {email}';
+    protected $signature = 'command:sendhongbao {email?}';
 
     /**
      * The console command description.
@@ -49,11 +50,12 @@ class sendhongbao extends Command
 
         }else {
             
-            $emails = DB::select('select email from spreads');
+            $emails = DB::select('select email from spreads order by count limit 0,10');
             foreach ($emails as $key => $value) {
-                sleep(20);
-                Mail::to($value->email)->send(new SendHongBaoMail());
-            }  
+                // sleep(30);
+                Mail::to($value->email)->queue(new SendHongBaoMail());
+                DB::update('update spreads set count = count+1 where email = ?', [$value->email]);
+            }
         }
         
     }
