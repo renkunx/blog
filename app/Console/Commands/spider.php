@@ -9,6 +9,8 @@ use GuzzleHttp\Pool;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\DomCrawler\Crawler;
 use App\Article;
+use Mockery\CountValidator\Exception;
+use Illuminate\Support\Facades\Log;
 class spider extends Command
 {
     /**
@@ -68,7 +70,9 @@ class spider extends Command
             ];
         });
         // dd($imgs);
-        $index = rand(0,count($imgs));
+        // print_r($imgs);
+        $index = rand(0,count($imgs)-3);
+        // print $index."\n";
         while(!$imgs[$index]['src'])
         {
             $index = rand(0,count($imgs));
@@ -98,7 +102,11 @@ class spider extends Command
         $article->image = $image;
         $article->articleid = preg_split('/\,/',$author)[0];
         // dd(preg_split('/\,/',$author)[0]);
-        $article->save();
+        try{
+            $article->save();
+        }catch(\Exception $e){
+            Log::info($e);
+        }
         // Storage::disk('local')->put($title,$content);
         
         // web 控制台获取文章链接
