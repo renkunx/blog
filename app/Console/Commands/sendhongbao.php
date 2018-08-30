@@ -50,9 +50,10 @@ class sendhongbao extends Command
 
         }else {
             
-            $emails = DB::select('select email from spreads order by count limit 0,10');
+            $emails = DB::select('select name,email from spreads where category="QQ" order by count asc,id asc limit 0,10');
             foreach ($emails as $key => $value) {
                 // sleep(30);
+                print $value->name."\n";
                 Mail::to($value->email)->queue(new SendHongBaoMail());
                 DB::update('update spreads set count = count+1 where email = ?', [$value->email]);
             }
