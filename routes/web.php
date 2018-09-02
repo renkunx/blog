@@ -32,3 +32,6 @@ Route::any('/wechat', 'WeChatController@serve');
 Route::get('/mailable', function () {
     return new App\Mail\SendHongBaoMail();
 });
+
+// simboss
+Route::any('/simboss', 'SimCardController@index');

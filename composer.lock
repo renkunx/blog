@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "13bfd77ba0ab140dd9153f6f9f5828eb",
+    "content-hash": "bf6e436db01fd65ba0de5122ec11da6e",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -47,6 +47,47 @@
                 "lpm"
             ],
             "time": "2018-07-13T08:44:04+00:00"
+        },
+        {
+            "name": "ckeditor/ckeditor",
+            "version": "4.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ckeditor/ckeditor-releases.git",
+                "reference": "485918a01ecac5bd286f169e831eddcc895f5132"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/485918a01ecac5bd286f169e831eddcc895f5132",
+                "reference": "485918a01ecac5bd286f169e831eddcc895f5132",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+",
+                "LGPL-2.1+",
+                "MPL-1.1+"
+            ],
+            "authors": [
+                {
+                    "name": "CKSource",
+                    "homepage": "http://cksource.com"
+                }
+            ],
+            "description": "JavaScript WYSIWYG web text editor.",
+            "homepage": "http://ckeditor.com",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "fckeditor",
+                "html",
+                "javascript",
+                "richtext",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2018-07-03T13:41:31+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -397,6 +438,71 @@
                 "parser"
             ],
             "time": "2018-03-08T01:11:30+00:00"
+        },
+        {
+            "name": "exodusanto/administrator",
+            "version": "v5.6.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exodusanto/Laravel-Admin.git",
+                "reference": "0c926fec03e939de942f05fdb9ed70700c11f344"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exodusanto/Laravel-Admin/zipball/0c926fec03e939de942f05fdb9ed70700c11f344",
+                "reference": "0c926fec03e939de942f05fdb9ed70700c11f344",
+                "shasum": ""
+            },
+            "require": {
+                "ckeditor/ckeditor": "4.*",
+                "laravel/framework": "5.6.*",
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~5.7.12"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Frozennode\\Administrator\\AdministratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/controllers"
+                ],
+                "psr-0": {
+                    "Frozennode\\Administrator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Hartigan",
+                    "email": "jan@frozennode.com"
+                },
+                {
+                    "name": "Antonio Dal Sie",
+                    "email": "info@antoniodalsie.com"
+                }
+            ],
+            "description": "A database interface package for Laravel (Legacy of Frozennode Laravel-Administrator)",
+            "homepage": "http://administrator.frozennode.com",
+            "keywords": [
+                "admin",
+                "administrator",
+                "cms",
+                "database",
+                "laravel",
+                "laravel-administrator"
+            ],
+            "time": "2018-06-18T12:27:03+00:00"
         },
         {
             "name": "fabpot/goutte",
@@ -1947,6 +2053,46 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "simboss/simboss-php-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simboss-sdk/simboss-php-sdk.git",
+                "reference": "413c8045fcab7d11ee51570fe11bf7bb733bc27e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simboss-sdk/simboss-php-sdk/zipball/413c8045fcab7d11ee51570fe11bf7bb733bc27e",
+                "reference": "413c8045fcab7d11ee51570fe11bf7bb733bc27e",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Simboss\\Sdk\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "simboss php sdk",
+            "homepage": "http://www.simboss.com",
+            "keywords": [
+                "api",
+                "sdk",
+                "simboss"
+            ],
+            "time": "2018-06-29T02:01:40+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4864,7 +5010,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "simboss/simboss-php-sdk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
