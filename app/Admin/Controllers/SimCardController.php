@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\User;
+use App\SimCard;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -11,7 +11,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 
-class UserController extends Controller
+class SimCardController extends Controller
 {
     use ModelForm;
 
@@ -24,9 +24,9 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('前端用户管理');
-            $content->description('管理前端用户');
-
+            $content->header('物联卡管理');
+            $content->description('物联卡管理');
+            
             $content->body($this->grid());
         });
     }
@@ -41,8 +41,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('前端用户管理');
-            $content->description('');
+            $content->header('header');
+            $content->description('description');
 
             $content->body($this->form()->edit($id));
         });
@@ -71,12 +71,12 @@ class UserController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(User::class, function (Grid $grid) {
+        return Admin::grid(SimCard::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-            $grid->column('name','姓名');
-            $grid->column('email','E-MAIL');
-
+            $grid->column('iccid','智能卡号');
+            $grid->column('msisdn','手机号码');
+            $grid->column('orderDate','采购日期');
             $grid->created_at();
             $grid->updated_at();
         });
@@ -89,12 +89,12 @@ class UserController extends Controller
      */
     protected function form()
     {
-        return Admin::form(User::class, function (Form $form) {
+        return Admin::form(SimCard::class, function (Form $form) {
 
-            $form->display('id', '序号');
+            $form->display('id', 'ID');
 
-            $form->display('created_at', '添加时间');
-            $form->display('updated_at', '修改时间');
+            $form->display('created_at', 'Created At');
+            $form->display('updated_at', 'Updated At');
         });
     }
 }

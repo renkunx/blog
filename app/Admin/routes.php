@@ -14,6 +14,7 @@ Route::group([
     // $router->get('/user', 'UserController@index');
 
     $router->resources([
-        '/users' => UserController::class
+        '/users' => UserController::class,
+        '/simcard' => SimCardController::class,
         ]);
 });
