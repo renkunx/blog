@@ -41,10 +41,13 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('登陆') }}</a>
+                                <a class="nav-link" href="{{ url('/news') }}">{{ __('新闻') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('注册') }}</a>
+                                <a class="nav-link" href="{{ url('/article') }}">{{ __('玩转西安') }}</a>
+                            </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/admin') }}">{{ __('后台管理') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -78,7 +81,7 @@
             @yield('content')
         </main>
     </div>
-    <section id="footer">
+    <footer id="footer">
             <div class="container">
                 <div class="row text-center text-xs-center text-sm-center text-md-center">
                     <div class="col-4">
@@ -106,7 +109,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
                         <ul class="list-unstyled list-inline social text-center">
                             <li class="list-inline-item"><a href="tel:+8618629080248"><i class="fa fa-phone"></i></a></li>
                             <li class="list-inline-item"><a href="https://weibo.com/5720540544/profile?topnav=1&wvr=6"><i class="fa fa-weibo"></i></a></li>
@@ -129,6 +132,6 @@
                     </hr>
                 </div>	
             </div>
-        </section>
+</footer>
 </body>
 </html>

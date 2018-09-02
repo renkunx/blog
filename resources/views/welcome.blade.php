@@ -72,8 +72,13 @@
                     @auth
                         <a href="{{ url('/home') }}">主页</a>
                     @else
-                        <a href="{{ route('login') }}">登陆</a>
-                        <a href="{{ route('register') }}">注册</a>
+                        <!-- <a href="{{ route('login') }}">登陆</a>
+                        <a href="{{ route('register') }}">注册</a> -->
+                        <a href="{{ url('/news') }}" target="_blank">新闻</a>
+                        <a href="{{ url('/article') }}" target="_blank">玩转西安</a>
+                        <a href="https://github.com/ipusi" target="_blank">GitHub</a>
+                        <a href="{{ url('/contact') }}" target="_blank">关于我们</a>
+                        <a href="{{ url('/admin') }}">后台登陆</a>
                     @endauth
                 </div>
             @endif

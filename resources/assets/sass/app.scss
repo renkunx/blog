@@ -23,11 +23,29 @@ section .section-title {
     text-transform: uppercase;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+.py-4 {
+    .container {
+    min-height: calc(100vh - 357px)
+    // margin-bottom: 30px;
+    }
+}
+
 #footer {
     background: #fff !important;
     box-shadow: -3px -2px 4px rgba(0, 0, 0, 0.04);
 }
-
+#footer{
+  .container {
+    padding-top: 20px;
+  }
+}
+    
 #footer h5 {
     padding-left: 10px;
     border-left: 3px solid #eeeeee;
