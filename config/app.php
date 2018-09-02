@@ -151,7 +151,6 @@ return [
         //添加 wechat
         Overtrue\LaravelWeChat\ServiceProvider::class,
 
-        Frozennode\Administrator\AdministratorServiceProvider::class,
 
         /*
          * Package Service Providers...
