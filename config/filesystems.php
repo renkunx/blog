@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
+    'cloud' => env('FILESYSTEM_CLOUD', 'qiniu'),
 
     /*
     |--------------------------------------------------------------------------
@@ -47,11 +47,11 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
-        'admin' => [
+        'uploads' => [
             'driver' => 'local',
-            'root' => public_path('admin'),
-            'url' => env('APP_URL').'/admin',
+            'root' => public_path('uploads'),
             'visibility' => 'public',
+            'url' => env('APP_URL').'/uploads',
         ],
 
         'public' => [
@@ -82,10 +82,10 @@ return [
             'bucket'    => env('QINIU_BUCKET_NAME'),  //Bucket名字
             'notify_url'=> '',  //持久化处理回调地址
             'url'       => 'http://p77n9a5vi.bkt.clouddn.com/',  // 填写文件访问根url
-        ],    
+        ] 
 
 
 
-    ],
+    ]
 
 ];

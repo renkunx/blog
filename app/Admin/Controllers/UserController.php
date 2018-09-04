@@ -74,7 +74,8 @@ class UserController extends Controller
         return Admin::grid(User::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-
+            $grid->name('姓名');
+            $grid->email('E-MAIL');
             $grid->created_at();
             $grid->updated_at();
         });
