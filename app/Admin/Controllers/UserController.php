@@ -74,8 +74,6 @@ class UserController extends Controller
         return Admin::grid(User::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-            $grid->column('name','姓名');
-            $grid->column('email','E-MAIL');
 
             $grid->created_at();
             $grid->updated_at();
@@ -91,10 +89,10 @@ class UserController extends Controller
     {
         return Admin::form(User::class, function (Form $form) {
 
-            $form->display('id', '序号');
+            $form->display('id', 'ID');
 
-            $form->display('created_at', '添加时间');
-            $form->display('updated_at', '修改时间');
+            $form->display('created_at', 'Created At');
+            $form->display('updated_at', 'Updated At');
         });
     }
 }
