@@ -23,11 +23,11 @@ class UserController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-
             $content->header('前端用户管理');
             $content->description('管理前端用户');
 
             $content->body($this->grid());
+            
         });
     }
 
@@ -40,7 +40,6 @@ class UserController extends Controller
     public function edit($id)
     {
         return Admin::content(function (Content $content) use ($id) {
-
             $content->header('前端用户管理');
             $content->description('');
 
@@ -56,7 +55,6 @@ class UserController extends Controller
     public function create()
     {
         return Admin::content(function (Content $content) {
-
             $content->header('header');
             $content->description('description');
 
@@ -72,7 +70,6 @@ class UserController extends Controller
     protected function grid()
     {
         return Admin::grid(User::class, function (Grid $grid) {
-
             $grid->id('ID')->sortable();
             $grid->name('姓名');
             $grid->email('E-MAIL');
@@ -89,7 +86,6 @@ class UserController extends Controller
     protected function form()
     {
         return Admin::form(User::class, function (Form $form) {
-
             $form->display('id', 'ID');
 
             $form->display('created_at', 'Created At');

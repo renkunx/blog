@@ -79,6 +79,7 @@
                         <a href="https://github.com/ipusi" target="_blank">GitHub</a>
                         <a href="{{ url('/contact') }}" target="_blank">关于我们</a> -->
                         <a href="{{ url('/backend') }}">后台管理</a>
+                        
                     @endauth
                 </div>
             @endif
