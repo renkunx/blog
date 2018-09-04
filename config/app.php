@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://frp.shuigvo.info'),
+    'url' => env('APP_URL', 'http://frp.shuigvo.info'),
 
     /*
     |--------------------------------------------------------------------------

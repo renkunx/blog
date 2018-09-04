@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>爱普斯科技 - 兴业尽责</title>
 
@@ -90,7 +90,7 @@
 
                 <div class="links">
                     <a href="{{ url('/news') }}" target="_blank">新闻</a>
-                    <a href="https://github.com/ipusi" target="_blank">GitHub</a>
+                    <a href="http://github.com/ipusi" target="_blank">GitHub</a>
                     <a href="{{ url('/article') }}" target="_blank">玩转西安</a>
                     <a href="{{ url('/contact') }}" target="_blank">关于我们</a>
                 </div>
