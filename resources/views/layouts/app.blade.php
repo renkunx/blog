@@ -47,7 +47,7 @@
                                 <a class="nav-link" href="{{ url('/article') }}">{{ __('玩转西安') }}</a>
                             </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/admin') }}">{{ __('后台管理') }}</a>
+                                <a class="nav-link" href="{{ url('/backend') }}">{{ __('后台管理') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
