@@ -150,7 +150,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         //添加 wechat
         Overtrue\LaravelWeChat\ServiceProvider::class,
-
+        // 使用7牛存储
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
 
         /*
          * Package Service Providers...

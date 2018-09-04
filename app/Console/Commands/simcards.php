@@ -48,7 +48,7 @@ class simcards extends Command
     {
         //
         //初始化client
-        $simbossClient = SimbossClient::newInstance("102420134014", "96347f81ea703bf7d2277fce78782ca7");
+        $simbossClient = SimbossClient::newInstance(config('simcardappid'), config('simcardsecret'));
 
         
         
@@ -75,11 +75,12 @@ class simcards extends Command
                     SimCard::where('iccid',$data->iccid)->update([
                         'type' => $data->type,
                         'status' => $data->status,
-                        'iratePlanName' => isset($data->iratePlanName) ? $data->iratePlanName : "2018-01-01 00:00:00",
-                        'startDate' => isset($data->startDate) ? $data->startDate : "2018-01-01 00:00:00",
-                        'expireDate' => isset($data->expireDate) ?  $data->expireDate : "2018-01-01 00:00:00",
+                        'irateplan_name' => isset($data->iratePlanName) ? $data->iratePlanName : " ",
+                        'start_date' => isset($data->startDate) ? $data->startDate : "2018-01-01 00:00:00",
+                        'expire_date' => isset($data->expireDate) ?  $data->expireDate : "2018-01-01 00:00:00",
+                        'open_date' => isset($data->openDate) ?  $data->openDate : "2018-01-01 00:00:00",
                         // 'realExpireData' => $data->realExpireData,
-                        'usedDataVolume' => $data->usedDataVolume,
+                        'data_usage' => isset($data->dataUsage) ? $data->dataUsage : 0,
                         'carrier' => $data->carrier,
                         'memo' => isset($data->memo) ? $data->memo : " "
                         ]);

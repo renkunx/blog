@@ -37,7 +37,7 @@ return [
     /*
      * Laravel-admin html title.
      */
-    'title' => 'Admin',
+    'title' => '爱普斯后台管理系统',
 
     /*
      * Use `https`.
@@ -68,7 +68,7 @@ return [
      */
     'upload' => [
 
-        'disk' => 'admin',
+        'disk' => 'qiniu',
 
         'directory' => [
             'image' => 'images',
