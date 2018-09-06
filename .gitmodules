@@ -1,0 +1,3 @@
+[submodule "laradocker"]
+	path = laradocker
+	url = https://github.com/ipusi/laradocker.git
