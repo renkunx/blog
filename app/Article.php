@@ -10,6 +10,7 @@ class Article extends Model
     public function getAuthorAttribute($value)
     {
         // dd(preg_split('/\,/',$value));
-        return preg_split('/\,/',$value)[1];
+        
+        return preg_split('/\,/', $value)[1];
     }
 }

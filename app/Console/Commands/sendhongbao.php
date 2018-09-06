@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Spread;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Queue\Queue;
+use Illuminate\Support\Facades\Log;
 
 class sendhongbao extends Command
 {
@@ -44,20 +45,21 @@ class sendhongbao extends Command
     {
         //
         $email = $this->argument('email');    //查询关键词
-        if($email)
-        {
+        if ($email) {
             Mail::to($email)->send(new SendHongBaoMail());
-
-        }else {
-            
+        } else {
             $emails = DB::select('select name,email from spreads where category="QQ" order by count asc,id asc limit 0,10');
             foreach ($emails as $key => $value) {
-                sleep(10);
+                // sleep(10);
                 print $value->name."\n";
-                Mail::to($value->email)->queue(new SendHongBaoMail());
-                DB::update('update spreads set count = count+1 where email = ?', [$value->email]);
+                try {
+                    Mail::to($value->email)->queue(new SendHongBaoMail());
+                    DB::update('update spreads set count = count+1 where email = ?', [$value->email]);
+                } catch (\Exception $e) {
+                    print $value->name." ".$value->email."发送失败\n";
+                    Log::error($e);
+                }
             }
         }
-        
     }
 }
