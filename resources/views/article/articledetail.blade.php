@@ -14,6 +14,7 @@
                 <span class="label label-default">{{ $article->created_at }}</span>
                 <span class="label label-success">{{ $article->author }}</span>
                 <span class="label label-info">{{ $article->keywords }}</span>
+                <span>·{{ $article->visits }}阅读</span>
               </p>
               <div class="content">
                 {!! $article->content !!}

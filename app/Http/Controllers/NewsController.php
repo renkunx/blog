@@ -19,9 +19,11 @@ class NewsController extends Controller
     }
 
     //新闻详情
+    
     function show( $articleid)
     {
-        $news = News::where('articleid','=',$articleid)->first();
+        News::where('articleid', '=', $articleid)->increment('visits');
+        $news = News::where('articleid', '=', $articleid)->first();
         // $relatednews = News::where('articleid','=',$articleid)->relatednews();
         $relatednews = $news->relatednews;
         $newstimelines = $news->newstimelines;

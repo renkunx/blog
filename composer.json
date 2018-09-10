@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "awssat/laravel-visits": "^1.3",
         "caouecs/laravel-lang": "~3.0",
         "encore/laravel-admin": "1.5.*",
         "fabpot/goutte": "^3.2",

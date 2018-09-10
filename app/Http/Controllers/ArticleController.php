@@ -49,6 +49,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         //
+        Article::where('id','=',$id)->increment('visits');
         $article = Article::where('id','=',$id)->first();
         $title = $article->title;
         // dd($article);

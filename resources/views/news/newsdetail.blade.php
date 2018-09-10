@@ -10,13 +10,14 @@
             <h2 class="blog-post-title">{{ $news->title }}</h2>
             <p class="blog-post-meta"> 
               <span class="label label-default">{{ $news->created_at }}</span>
-               
-
+              
+              
               @foreach ( $news->relatednews as $relatednews )
-                
-                <span class="label label-info">{{ $relatednews->brand }}</span>
+              
+              <span class="label label-info">{{ $relatednews->brand }}</span>
               @endforeach
-
+              <span class="label label-success">{{ $news->visits }}关注</span>
+              
             </p>
 
             
