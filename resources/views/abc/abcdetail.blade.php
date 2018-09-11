@@ -8,29 +8,29 @@
       <div class="card-body">
         <h5 class="card-title"></h5>
         <dl class="row">
-          <dt class="col-sm-1">姓名</dt>
-          <dd class="col-sm-11">{{$abc->name}}</dd>
+          <dt class="col-2">姓名</dt>
+          <dd class="col-10">{{$abc->name}}</dd>
           
-          <dt class="col-sm-1">年龄</dt>
-          <dd class="col-sm-11">{{$abc->age}}</dd>
+          <dt class="col-2">年龄</dt>
+          <dd class="col-10">{{$abc->age}}</dd>
         
-          <dt class="col-sm-1">身高</dt>
-          <dd class="col-sm-11">{{$abc->height}}cm</dd>
+          <dt class="col-2">身高</dt>
+          <dd class="col-10">{{$abc->height}}cm</dd>
         
-          <dt class="col-sm-1">单位</dt>
-          <dd class="col-sm-11">{{$abc->work}}</dd>
+          <dt class="col-2">单位</dt>
+          <dd class="col-10">{{$abc->work}}</dd>
         
-          <dt class="col-sm-1 text-truncate">职位</dt>
-          <dd class="col-sm-11">{{$abc->position}}</dd>
+          <dt class="col-2 text-truncate">职位</dt>
+          <dd class="col-10">{{$abc->position}}</dd>
         
-          <dt class="col-sm-1">微信</dt>
-          <dd class="col-sm-11">{{$abc->weixin}}</dd>
+          <dt class="col-2">微信</dt>
+          <dd class="col-10">{{$abc->weixin}}</dd>
         
-          <dt class="col-sm-1">电子邮箱</dt>
-          <dd class="col-sm-11">{{$abc->email}}</dd>
+          <dt class="col-2">电子邮箱</dt>
+          <dd class="col-10">{{$abc->email}}</dd>
         
-          <dt class="col-sm-1">个人简介</dt>
-          <dd class="col-sm-11">{{$abc->descripe}}</dd>
+          <dt class="col-2">个人简介</dt>
+          <dd class="col-10">{{$abc->descripe}}</dd>
         </dl>
       </div>
     </div>
