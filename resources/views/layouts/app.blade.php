@@ -13,9 +13,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link href="http://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    {{-- <link href="http://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="http://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="http://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> --}}
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" defer>
 </head>
