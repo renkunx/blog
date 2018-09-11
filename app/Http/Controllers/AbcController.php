@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
+use App\Abc;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
-class ArticleController extends Controller
+class AbcController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
-        return view('article/article', ['articles' => $articles]);
+        $abcs = Abc::orderBy('created_at', 'desc')->paginate(6);
+        return view('abc/abc', ['abcs'=> $abcs]);
     }
 
     /**
@@ -44,26 +43,24 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Article  $article
+     * @param  \App\Abc  $abc
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
-        Article::where('id', '=', $id)->increment('visits');
-        $article = Article::where('id', '=', $id)->first();
-        $title = $article->title;
-        // dd($article);
-        return view('article.articledetail', ['article' => $article, 'title' => $title]);
+        $abc = Abc::where('id', '=', $id)->first();
+        // dd($abc);
+        return view('abc/abcdetail', ['abc' => $abc]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Article  $article
+     * @param  \App\Abc  $abc
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Abc $abc)
     {
         //
     }
@@ -72,10 +69,10 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Article  $article
+     * @param  \App\Abc  $abc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Abc $abc)
     {
         //
     }
@@ -83,10 +80,10 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Article  $article
+     * @param  \App\Abc  $abc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Abc $abc)
     {
         //
     }

@@ -36,3 +36,6 @@ Route::get('/mailable', function () {
 
 // simboss
 Route::any('/simboss', 'SimCardController@index');
+// abc
+Route::any('/abc', 'AbcController@index');
+Route::any('/abc/{id}', 'AbcController@show');

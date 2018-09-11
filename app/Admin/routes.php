@@ -15,5 +15,6 @@ Route::group([
     $router->resources([
         '/users' => UserController::class,
         '/simcard' => SimCardController::class,
+        '/abc' => AbcController::class
         ]);
 });
