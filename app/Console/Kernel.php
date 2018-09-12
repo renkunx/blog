@@ -26,7 +26,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->command('route:list')->dailyAt('02:00');
+        // $schedule->command('route:list')->dailyAt('02:00')->description('测试计划任务');
+        $schedule->command('command:sendhongbao')->dailyAt('11:00')->description('领取支付宝红包');
     }
 
     /**

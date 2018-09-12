@@ -96,12 +96,11 @@ class WeChatController extends Controller
 
         $app = app('wechat.official_account');
         
-        $app->server->push(function($message){
+        $app->server->push(function ($message) {
             switch ($message['MsgType']) {
                 case 'event':
                     Log::info($message);
-                    if($message['Event'] == 'subscribe')
-                    {
+                    if ($message['Event'] == 'subscribe') {
                         return '欢迎关注 爱普斯科技！';
                     }
                     return '收到事件消息';
@@ -133,7 +132,6 @@ class WeChatController extends Controller
                     return '收到其它消息';
                     break;
             }
-            
         });
         // $app->broadcasting->sendText("大家好！这个是个测试消息");
         $response = $app->server->serve();
