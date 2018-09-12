@@ -95,6 +95,7 @@ class getgitemail extends Command
                 $spread->homepage = $homepage;
                 $spread->title = $categorys[2]."/".$categorys[3];
                 $spread->category = 'github';
+                // dd($spread);
                 try{
 
                     $spread->save();

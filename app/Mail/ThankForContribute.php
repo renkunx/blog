@@ -6,20 +6,21 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Storage;
+use App\Spread;
 
-class SendHongBaoMail extends Mailable
+class ThankForContribute extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $spread;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Spread $spread)
     {
         //
+        $this->spread = $spread;
     }
 
     /**
@@ -30,10 +31,7 @@ class SendHongBaoMail extends Mailable
     public function build()
     {
         $hongbaoma = 'http://p77n9a5vi.bkt.clouddn.com/IMG_0944.PNG';
-        $yuebaohongbao = 'http://p77n9a5vi.bkt.clouddn.com/yuebaohongbao.jpeg';
-        return $this->subject("您有一份来自马云的🎁需要领取")
-                    ->view('mail.hongbao', 
-                    ['hongbaoma' => $hongbaoma,
-                    'yuebaohongbao' => $yuebaohongbao] );
+        return $this->subject("感谢您对".$this->spread->title."社区的贡献")
+                    ->view('mail.thankgithub', ['spread'=> $this->spread, 'hongbaoma' => $hongbaoma ]);
     }
 }

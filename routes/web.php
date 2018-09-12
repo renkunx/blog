@@ -1,5 +1,7 @@
 <?php
 
+use App\Spread;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +33,10 @@ Route::any('/wechat', 'WeChatController@serve');
 
 // 邮件预览
 Route::get('/mailable', function () {
-    return new App\Mail\SendHongBaoMail();
+    // return new App\Mail\SendHongBaoMail();
+    $spread =  Spread::where('id', '=', '999')->first();
+    // dd($spread);
+    return new App\Mail\ThankForContribute($spread);
 });
 
 // simboss
