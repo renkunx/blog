@@ -50,12 +50,12 @@ class thankgithub extends Command
             $spread = Spread::where('id', '=', $id)->first();
             Mail::to($spread->email)->send(new ThankForContribute($spread));
         } else {
-            foreach (Spread::where('category', '=', 'github')->orderby('id', 'asc')->cursor() as  $value) {
+            foreach (Spread::where('category', '=', 'github')->orderby('count', 'asc')->orderby('id', 'asc')->take(30)->cursor() as  $value) {
                 // sleep(10);
                 print $value->name."\n";
                 try {
                     Mail::to($value->email)->queue(new ThankForContribute($value));
-                    DB::update('update spreads set count = count+1 where email = ?', [$value->email]);
+                    DB::update('update spreads set count = count+1 where email = ? ', [$value->email]);
                 } catch (\Exception $e) {
                     print($value->name." ".$value->email."发送失败\n");
                     Log::error($value->name." ".$value->email."发送失败\n".$e);
