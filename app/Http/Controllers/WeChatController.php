@@ -9,6 +9,12 @@ use EasyWeChat\Kernel\Messages\Text;
 
 class WeChatController extends Controller
 {
+    private $app;
+
+    public function __construct()
+    {
+        $this->app = app('wechat.official_account');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,6 +23,8 @@ class WeChatController extends Controller
     public function index()
     {
         //
+        // $this->app->jssdk->setUrl('https://frp.shuigvo.info/wechat/test');
+        // return view('wechat.pay', ['app'=> $this->app]);
     }
 
     /**
@@ -94,11 +102,9 @@ class WeChatController extends Controller
     {
         Log::info('request arrived.'); # 注意：Log 为 Laravel 组件，所以它记的日志去 Laravel 日志看，而不是 EasyWeChat 日志
 
-        $app = app('wechat.official_account');
-
-        dd($app);
         
-        $app->server->push(function ($message) {
+        
+        $this->app->server->push(function ($message) {
             switch ($message['MsgType']) {
                 case 'event':
                     Log::info($message);
@@ -136,7 +142,7 @@ class WeChatController extends Controller
             }
         });
         // $app->broadcasting->sendText("大家好！这个是个测试消息");
-        $response = $app->server->serve();
+        $response = $this->app->server->serve();
         return $response;
     }
 }

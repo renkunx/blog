@@ -30,6 +30,10 @@ Route::get('/article', 'ArticleController@index');
 Route::get('/article/{id}', 'ArticleController@show');
 //微信消息
 Route::any('/wechat', 'WeChatController@serve');
+//微信入口
+Route::any('/wechat/index', 'WeChatIndexController@index');
+Route::any('/wechat/callback', 'WeChatIndexController@callback');
+Route::any('/wechat/pay', 'WeChatPayController@index');
 
 // 邮件预览
 Route::get('/mailable', function () {

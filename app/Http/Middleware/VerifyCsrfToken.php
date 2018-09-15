@@ -13,6 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //排除微信相关的路由
-        'wechat',
+        'wechat*',
     ];
 }
