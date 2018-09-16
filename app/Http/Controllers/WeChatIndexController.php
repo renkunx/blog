@@ -38,7 +38,7 @@ class WeChatIndexController extends Controller
         }
         // 已经登录过
         $user = session('wechat_user');
-        return view('wechat.index', ['user'=>print_r($user)]);
+        return view('wechat.index', [ 'user'=>$user , 'app' => $this->app]);
     }
 
     /**

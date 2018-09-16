@@ -32,7 +32,7 @@
           </div>
         </div>
         @endforeach
-        <div class="flex-md-row mb-4 box-shadow h-md-250">{{ $articles->links() }}</div>
+        <div>{{ $articles->render() }}</div>
         
     </div>
 

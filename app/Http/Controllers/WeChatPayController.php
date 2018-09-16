@@ -47,8 +47,7 @@ class WeChatPayController extends Controller
 
             return view('wechat.pay', ['json'=>$json ,'payment' => $this->payment]);
         } else {
-            Log::error('微信支付簽名失敗:'.var_export($result, 1));
-            // return false;
+            Log::error('微信支付签名失败:'.var_export($result, 1));
         }
     }
 
