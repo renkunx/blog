@@ -111,7 +111,7 @@ class spider extends Command
         
         // web 控制台获取文章链接
         // $('.tn-image').each(function(index,value){
-        //     console.log(value.children[0].getAttribute('href'))
+        //     console.log('php artisan command:spider http://www.mafengwo.cn'+value.children[0].getAttribute('href'))
         //     })
     }
 }

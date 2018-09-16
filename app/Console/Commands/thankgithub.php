@@ -50,7 +50,7 @@ class thankgithub extends Command
             $spread = Spread::where('id', '=', $id)->first();
             Mail::to($spread->email)->send(new ThankForContribute($spread));
         } else {
-            foreach (Spread::where('category', '=', 'github')->orderby('count', 'asc')->orderby('id', 'asc')->take(30)->cursor() as  $value) {
+            foreach (Spread::where('category', '=', 'github')->orderby('count', 'asc')->orderby('id', 'asc')->take(50)->cursor() as  $value) {
                 // sleep(10);
                 print $value->name."\n";
                 try {

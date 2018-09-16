@@ -301,7 +301,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 flex-center">
+            <div class="col-12 flex-left" style="text-indent:0.8cm">
                 <p>感谢您对{{ $spread->title }}项目的贡献，请领取您的支付宝红包奖励。</p>
             </div>
         </div>
