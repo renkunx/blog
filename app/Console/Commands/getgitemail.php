@@ -48,28 +48,28 @@ class getgitemail extends Command
         $crawler = $client->request('GET', 'https://github.com/');
         $crawler = $client->click($crawler->selectLink('Sign in')->link());
         $form = $crawler->selectButton('Sign in')->form();
-        $crawler = $client->submit($form, array('login' => 'ipusi', 'password' => 'sanjoh-6zumgI-fixner'));
+        $crawler = $client->submit($form, array(
+            'login' => config('app.gitusername'), 
+            'password' => config('app.gitpassword') 
+        ));
         
         $client->setHeader('accept','application/json');
         $client->setHeader('content-type','application/json');
         $crawler = $client->request('GET',$url.'-data');
         
-        // Storage::disk('local')->put('github',$client->getResponse()->getContent());
+        Storage::disk('local')->put('github',$client->getResponse()->getContent());
 
         $contributors = json_decode($client->getResponse()->getContent());
         foreach ($contributors as $key => $value) {
             $author = $value->author;
-
-
             $avatar =  $author->avatar;
             // $name =  $author->login;
             // 获取邮件地址
             $client->setHeader('accept','text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8');
-            // $path =  'https://github.com/afc163';
             $path =  'https://github.com'.$author->path;
             print $path."\n";
             $crawler = $client->request('GET',$path);
-            // dd($crawler);
+            Log::info($client->getResponse());
             $email = "";
             $org = "";
             $locate = "";

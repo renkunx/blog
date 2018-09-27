@@ -95,6 +95,8 @@ return [
     // 'fallback_locale' => 'en',
     'fallback_locale' => 'zh-CN',
 
+    'gitusername' => env('GITUSERNAME', 'ipusi'),
+    'gitpassword' => env('GITPASSWORD', 'nopassword'),
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
