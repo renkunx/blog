@@ -5,7 +5,7 @@ return [
     /*
      * Laravel-admin name.
      */
-    'name' => '爱普斯科技后台管理',
+    'name' => '爱普斯科技',
 
     /*
      * Logo in admin panel header.
@@ -37,7 +37,7 @@ return [
     /*
      * Laravel-admin html title.
      */
-    'title' => '爱普斯后台管理系统',
+    'title' => '后台管理',
 
     /*
      * Use `https`.
@@ -145,7 +145,7 @@ return [
     /*
      * Background image in login page
      */
-    'login_background_image' => '',
+    'login_background_image' => 'http://p77n9a5vi.bkt.clouddn.com/nastuh-abootalebi-284883-unsplash.jpg?imageView2/1/w/1280/h/800/interlace/1/q/94|imageslim',
 
     /*
      * Version displayed in footer.
